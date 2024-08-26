@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game List</title>
+</head>
+<body>
+    <h1>Game List</h1>
+    <ul>
+        {% for game in games %}
+            <li>
+                <a href="{% url 'game_detail' game.pk %}">{{ game }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

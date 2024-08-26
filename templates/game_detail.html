@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ game.name }}</title>
+</head>
+<body>
+    <h1>{{ game.name }}</h1>
+    <p>Genre: {{ game.game_name }}</p>
+    <p>Release Date: {{ game.created_date }}</p>
+    <p>User: {{ game.user.username }}</p>
+    {% if game.previous_game_result %}
+        <p>Previous Game: <a href="{% url 'game_detail' game.previous_game_result.pk %}">{{ game.previous_game_result }}</a></p>
+    {% endif %}
+</body>
+</html>
